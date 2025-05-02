@@ -1,0 +1,70 @@
+[
+  {
+    "word": "token",
+    "def": "Cadena usada para autenticar usuarios en aplicaciones web, común en APIs."
+  },
+  {
+    "word": "input",
+    "def": "Elemento HTML que permite al usuario ingresar datos en formularios."
+  },
+  {
+    "word": "click",
+    "def": "Acción de presionar un botón del ratón o touchpad, común en interacciones web."
+  },
+  {
+    "word": "fetch",
+    "def": "Método de JavaScript para hacer solicitudes HTTP desde el navegador."
+  },
+  {
+    "word": "style",
+    "def": "Atributo o archivo usado para definir la apariencia visual de un sitio web."
+  },
+  {
+    "word": "class",
+    "def": "Atributo HTML que permite agrupar elementos para aplicarles estilos o scripts."
+  },
+  {
+    "word": "table",
+    "def": "Elemento HTML usado para mostrar datos organizados en filas y columnas."
+  },
+  {
+    "word": "image",
+    "def": "Elemento HTML usado para insertar imágenes en una página web."
+  },
+  {
+    "word": "align",
+    "def": "Propiedad usada para definir la alineación de texto o elementos en CSS o HTML."
+  },
+  {
+    "word": "label",
+    "def": "Elemento HTML usado para definir una etiqueta asociada a un campo de formulario."
+  },
+  {
+    "word": "color",
+    "def": "Propiedad CSS que define el color del texto u otros elementos."
+  },
+  {
+    "word": "field",
+    "def": "Zona interactiva en un formulario donde el usuario puede ingresar datos."
+  },
+  {
+    "word": "route",
+    "def": "Enrutamiento que conecta URLs con funciones en frameworks como Flask o Express."
+  },
+  {
+    "word": "modal",
+    "def": "Ventana emergente superpuesta usada para mostrar contenido sin salir de la página."
+  },
+  {
+    "word": "layer",
+    "def": "Capa de contenido o estilo en el diseño web, especialmente en gráficos o CSS."
+  },
+  {
+    "word": "patch",
+    "def": "Actualización o corrección de código en un sistema web o software."
+  },
+  {
+    "word": "float",
+    "def": "Propiedad CSS para posicionar elementos uno al lado del otro."
+  }
+]

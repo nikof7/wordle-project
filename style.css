@@ -1,0 +1,181 @@
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #262B3C;
+    color: #DADCE0;
+    text-align: center;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 65px;
+    align-items: center;
+}
+
+header {
+    width: 500px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    background-color: #2B3041;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    font-size: 40px;
+}
+
+#board {
+    width: 350px;
+    height: 420px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 10px;
+}
+
+.flipped {
+    transform: rotateX(360deg);
+}
+
+.tile {
+    background-color: #3C4150;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 35px;
+    font-weight: 600;
+    transition: transform 0.8s;
+    transition-delay: var(--delay);
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.tile-selected {
+    border: solid #515769;
+}
+
+.correct {
+    background-color: #6AAA64;
+}
+
+.regular {
+    background-color: #CEB02C;
+}
+
+.incorrect {
+    background-color: #939B9F;
+}
+
+#gameOver {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    font-size: 84px;
+    font-weight: 800;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Botón */
+#gameOver > button {
+    cursor: pointer;
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 18px;
+    color: #FF3441;
+    border: 0;
+    border-radius: 7px;
+    background-color: #FED4D4;
+}
+
+#gameOver > button:hover {
+    background-color: #e29898;
+}
+
+.rotateIcon {
+    height: 1em;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    transform-origin: center center;
+}
+
+
+#gameOver button:hover .rotateIcon {
+    animation: spin 2s linear infinite;
+}
+
+.hidden {
+    visibility: hidden;
+}
+.hint-section {
+    position: relative;
+    width: 400px;
+    height: 100px;
+    overflow: hidden; /* Asegura que no se vea lo que sobresale */
+    display: flex;
+    justify-content: center;  /* Centra horizontalmente */
+    align-items: center;      /* Centra verticalmente */
+    border-radius: 20px;
+    background-color: #2B3041;
+}
+
+.hint-call {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 2;  /* Lo coloca por encima del hint */
+    backdrop-filter: blur(10px); /* Aplica el desenfoque cuando se activa */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hint {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    opacity: 0;  /* Comienza invisible */
+    visibility: hidden;  /* Inicialmente oculto */
+    pointer-events: none;  /* No interactuable mientras está oculto */
+    z-index: 1;  /* Lo coloca debajo de hint-call */
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;  /* Hacemos que el hint sea un contenedor flexible */
+    justify-content: center;  /* Centra el contenido horizontalmente */
+    align-items: center;      /* Centra el contenido verticalmente */
+}
+
+.hint.show {
+    opacity: 1;                /* Hace visible el hint */
+    visibility: visible;       /* Hace visible el hint */
+    pointer-events: all;       /* Habilita la interacción cuando está visible */
+    transition: opacity 1s ease, visibility 0s 0s; /* Animación sin retraso en la visibilidad */
+}
+
+.hint-call:hover {
+    background-color: rgba(32, 36, 49, 0.63);
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=0, user-scalable=no" />
+  <title>Wordle programación</title>
+
+  <!-- Tipografía -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+
+  <!-- Estilos y lógica -->
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+</head>
+
+<body>
+
+  <header>WORDLE</header>
+
+  <section id="board">
+    <!-- Las casillas del juego se generan dinámicamente -->
+  </section>
+
+  <section class="hint-section">
+    <div class="hint">
+      <span>Estilo relacionado con el modelo de diseño Flexbox en CSS.</span>
+    </div>
+    <div class="hint-call">
+      <p>¡Click para ver la pista!</p>
+    </div>
+  </section>
+
+  <div id="gameOver" class="hidden">
+    <span id="gameOverResult">¡Ganaste!</span>
+    <button onClick="window.location.reload();">
+      <svg class="rotateIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+           viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8" />
+        <path d="M21 3v5h-5" />
+      </svg>
+      Reiniciar
+    </button>
+  </div>
+
+</body>
+
+</html>
